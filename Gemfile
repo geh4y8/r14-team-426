@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'devise'
 gem 'cancancan'
 gem 'omniauth-khan-academy'
+gem 'rest_client'
 
 group :development do
   gem 'better_errors'
