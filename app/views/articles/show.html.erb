@@ -1,8 +1,38 @@
-<div class = "header">
+<!-- Header Temporary -->
 
+    <div class = "header">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" href="#">Rece.ss</a>
+        <div class="hcontainer">
+          <% if current_user %>
+            Welcome, <%= current_user.name %>!
+            <%= link_to "Sign Out", signout_path %>
+          <% else %>
+            <%= link_to "Sign in", "/auth/khan_academy" %>
+          <% end %>
+        </div>
+      </nav>
+    </div>
+
+
+
+
+<div class = "video">
+  <video autoplay loop poster="/assets/recess-intro.jpg" id="bgvid">
+    <source src="/assets/recess-intro.webm" type="video/webm">
+    <source src="/assets/recess-intro.mp4" type="video/mp4">
+  </video>
 </div>
-<h1>loading</h1>
-<video autoplay loop poster="/assets/recess-intro.jpg" id="bgvid">
-  <source src="/public/recess-intro.webm" type="video/webm">
-  <source src="/public/recess-intro.mp4" type="video/mp4">
-</video>
+
+<div class = "body">
+  Welcome to Rece.ss!
+</div>
+
+<!-- Footer Temporary -->
+<div class="footer">
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container">
+    TEMP FOOTER
+  </div>
+</nav>
+</div>
