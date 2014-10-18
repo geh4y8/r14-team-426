@@ -10,6 +10,9 @@ gem 'turbolinks'
 gem 'devise'
 gem 'cancancan'
 gem 'omniauth-khan-academy'
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
 
 group :development do
   gem 'better_errors'
