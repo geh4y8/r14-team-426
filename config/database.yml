@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: recess_development
+
+test:
+  adapter: postgresql
+  database: recess_test

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recess</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="user_nav">
+  <% if current_user %>
+    Welcome, <%= current_user.name %>!
+    <%= link_to "Sign Out", signout_path %>
+  <% else %>
+    <%= link_to "Sign in", "/auth/khan_academy" %>
+  <% end %>
+</div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>
