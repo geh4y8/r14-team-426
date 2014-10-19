@@ -1,18 +1,18 @@
 <!-- Header Temporary -->
 
-    <div class = "header">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <a class="navbar-brand" href="#">Rece.ss</a>
-        <div class="hcontainer">
-          <% if current_user %>
-            Welcome, <%= current_user.name %>!
-            <%= link_to "Sign Out", signout_path %>
-          <% else %>
-            <%= link_to "Sign in", "/auth/khan_academy" %>
-          <% end %>
-        </div>
-      </nav>
+<div class = "header">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <a class="navbar-brand" href="#">Rece.ss</a>
+    <div class="hcontainer">
+      <% if current_user %>
+        Welcome, <%= current_user.name %>!
+        <%= link_to "Sign Out", signout_path %>
+      <% else %>
+        <%= link_to "Sign in", "/auth/khan_academy" %>
+      <% end %>
     </div>
+  </nav>
+</div>
 
 
 
@@ -24,9 +24,21 @@
   </video>
 </div>
 
-<div class = "body">
-  Welcome to Rece.ss!
+<div class = "indexbody">
+<form>
+<div class="login-form">
+  <div class="page-header">
+    <h3>Welcome to Rece.ss!</h3>
+    <h3>Parent's Login Here:</h3>
+  </div>
+  <input type="email" placeholder="Email">
+  <input type="submit" value="Sign in">
 </div>
+</form>
+
+</div>
+
+
 
 <!-- Footer Temporary -->
 <div class="footer">
