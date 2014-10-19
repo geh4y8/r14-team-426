@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  attr_accessor :new_count, :old_count, :new_badge, :access_token
+  attr_accessor :sum, :new_badge, :access_token
 
   def self.create_with_omniauth(auth)
     create! do |user|
@@ -8,10 +8,6 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       #user.name = auth["user_info"]["name"]
     end
-  end
-
-  def new_badge?
-    new_count != old_count
   end
 
   def get_access_token(auth)
@@ -24,10 +20,9 @@ class User < ActiveRecord::Base
   def get_badge_count(access_token)
     response = access_token.get("http://www.khanacademy.org/api/v1/user")
     badge_counts = JSON.parse(response.body).to_hash["badge_counts"]
-    self.old_count ||= {}
-    self.new_count = badge_counts
-    self.new_badge?
-    self.old_count = self.new_count
+    sum = 0
+    badge_counts.values.each { |a| sum+=a }
+    self.sum = sum
   end
 
 private

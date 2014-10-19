@@ -9,7 +9,7 @@ class ApiController < ApplicationController
       format.html
       format.json do
           render :json => {id: @user.id,
-                           new_badge: @user.new_badge?}
+                           sum: @user.sum}
       end
     end
 
