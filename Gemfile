@@ -11,8 +11,10 @@ gem 'devise'
 gem 'cancancan'
 gem 'omniauth-khan-academy'
 
-gem 'twitter-bootstrap-rails'
-gem 'less-rails'
+gem 'sass-rails'
+gem 'bootstrap-sass'
+gem 'sprockets'
+
 gem 'therubyracer'
 
 gem 'oauth'

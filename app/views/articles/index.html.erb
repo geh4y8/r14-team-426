@@ -1,5 +1,4 @@
 <!-- Header Temporary -->
-
 <div class = "header">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <a class="navbar-brand" href="#">Rece.ss</a>
@@ -10,61 +9,45 @@
       </ul>
   </nav>
 </div>
-
-
-<script src="assets/javascripts/bootstrap.js"></script>
-
-
 <div class = "video">
   <video autoplay loop poster="/assets/recess-intro.jpg" id="bgvid">
     <source src="/aassets/recess-intro.webm" type="video/webm">
     <source src="/aassets/recess-intro.mp4" type="video/mp4">
   </video>
 </div>
-
 <div class = "indexbody">
-<form>
-<div class="login-form">
-  <div class="page-header">
-    <h3>Parent's Login Here:</h3>
+  <form>
+  <div class="login-form">
+    <div class="page-header">
+      <h3>Parent's Login Here:</h3>
+    </div>
+    <input type="email" placeholder="Email">
+    <input type="submit" value="Sign in">
   </div>
-  <input type="email" placeholder="Email">
-  <input type="submit" value="Sign in">
+  </form>
 </div>
-</form>
-
-</div>
-
-
-
-<!-- Footer Temporary -->
-<div class="footer">
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-
-  <div class="jumbotron">
-  <h1>Welcome to <div class = "title">Rece.ss</div></h1>
-  <p><a class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#myModal">Learn more</a></p>
-
-  <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Setting Up</h4>
       </div>
       <div class="modal-body">
-        Testing Modal
+        Congratulations for taking the first step towards your improving your child's future. Our mission at Rece.ss is to make sure that your child gets the most of out of their daily use of their computer. By partnering up with Khan Academy, we give you the peace of mind that your child is learning while also enjoying themselves.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href = "auth/khan_academy">Proceed</button></a>
       </div>
     </div>
   </div>
 </div>
-
-  </div>
-
-
-
+<div class="footer">
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="jumbotron">
+      <h1>Welcome to <div class = "title">Rece.ss</div></h1>
+      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Get Started</button>
+    </div>
+  </nav>
 </div>
