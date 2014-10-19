@@ -16,7 +16,6 @@
     {
       "matches": ["*://*/*"],
       "exclude_matches": ["https://www.khanacademy.org/*"],
-      "css": ["stylesheet.css"],
       "js": ["jquery-2.1.1.min.js", "app.js"]
     }
   ],
@@ -27,6 +26,6 @@
     "default_popup": "index.html"        // optional
   },
   "web_accessible_resources": [
-    "app.js"
+    "app.js", "jquery-2.1.1.min.js", "background.js"
   ]
 }
