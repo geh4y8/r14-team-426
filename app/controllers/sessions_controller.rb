@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     user.new_count = badge_counts
     user.new_badge?
     user.old_count = user.new_count
-    lasijd
+    user.save
   end
 
   def destroy

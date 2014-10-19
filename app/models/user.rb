@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessor :new_count, :old_count
+  attr_accessor :new_count, :old_count, :new_badge
 
   def self.create_with_omniauth(auth)
     create! do |user|
@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
   end
 
   def new_badge?
-    new_count == old_count
+    new_count != old_count
   end
 end
