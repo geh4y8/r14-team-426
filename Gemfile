@@ -11,7 +11,6 @@ gem 'devise'
 gem 'cancancan'
 gem 'omniauth-khan-academy'
 
-gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'sprockets'
 
