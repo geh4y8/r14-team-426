@@ -1,0 +1,14 @@
+{
+  "name": "Rece.ss",
+  "description": "My first Chrome Extension",
+  "version": "0.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "exclude_matches": ["https://www.khanacademy.org/*"],
+      "css": ["stylesheet.css"],
+      "js": ["jquery-2.1.1.min.js", "app.js"]
+    }
+  ]
+}

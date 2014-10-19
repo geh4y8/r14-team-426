@@ -1,0 +1,1 @@
+$('body').html('<h1>Go To School!</h1>');
