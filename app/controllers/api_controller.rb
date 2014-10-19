@@ -8,7 +8,8 @@ class ApiController < ApplicationController
       @user.new_badge = @user.new_badge?
       format.html
       format.json do
-          render :json => @user
+          render :json => {id: @user.id,
+                           new_badge: @user.new_badge?}
       end
     end
 
