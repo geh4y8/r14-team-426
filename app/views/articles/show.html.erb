@@ -1,0 +1,33 @@
+<script type = "text/javascript">
+$('#go').click(function(){go(50)});
+$('#ok').click(function(){go(500)});
+
+setTimeout(function(){go(50)},700);
+setTimeout(function(){go(500)},2000);
+
+function go(nr) {
+  $('.bb').fadeToggle(200);
+  $('.message').toggleClass('comein');
+  $('.check').toggleClass('scaledown');
+  $('#go').fadeToggle(nr);
+}
+</script>
+
+<div class="b"></div>
+<div class="bb"></div>
+<a href = "http://www.google.com">
+<button id="go">
+  GO
+</button>
+</a>
+<div class="message">
+  <div class="check">
+    &#10004;
+  </div>
+  <p>
+    Success
+  </p>
+  <p>
+    You are now logged in.
+  </p>
+</div>
