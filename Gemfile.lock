@@ -180,11 +180,8 @@ DEPENDENCIES
   coffee-rails
   devise
   jquery-rails
-<<<<<<< HEAD
   less-rails
-=======
   oauth
->>>>>>> add_badges
   omniauth-khan-academy
   pg
   pry
