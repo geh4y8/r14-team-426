@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  attr_accessor :sum, :new_badge, :access_token, :email
+  attr_accessor :sum, :new_badge, :access_token
 
   def self.create_with_omniauth(auth)
     create! do |user|
