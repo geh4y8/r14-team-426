@@ -9,6 +9,9 @@ video#bgvid {
 .header{
 
 }
+.navbar-brand{
+  color: #1FCCC2!important;
+}
 .footer{
 
 }
@@ -32,8 +35,8 @@ body {
   margin: 0 auto;
   background: #fff;
   -webkit-animation: top 700ms ease-out;
-  border: 2px solid;
   border-radius: 25px;
+
 }
 
 .page-header {

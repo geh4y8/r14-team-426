@@ -3,14 +3,11 @@
 <div class = "header">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <a class="navbar-brand" href="#">Rece.ss</a>
-    <div class="hcontainer">
-      <% if current_user %>
-        Welcome, <%= current_user.name %>!
-        <%= link_to "Sign Out", signout_path %>
-      <% else %>
-        <%= link_to "Sign in", "/auth/khan_academy" %>
-      <% end %>
-    </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><%= link_to "Sign in", "/auth/khan_academy" %></li>
+      </ul>
   </nav>
 </div>
 
