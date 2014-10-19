@@ -2,6 +2,37 @@
 
 
 
+== Setup
+
+In your terminal, clone this repo:
+
+
+<tt>$ clone https://github.com/railsrumble/r14-team-426.git</tt>
+
+Make sure you've installed postgresl and have started the server:
+
+<tt>$ postgres</tt>
+
+Install all the dependencies:
+
+<tt>$ bundle install</tt>
+
+Set up the databases on your local machine:
+
+<tt>
+$ rake db:create
+</tt>
+and then
+<tt>
+$ rake db:schema:load
+</tt>
+
+Finally, start the rails server:
+
+<tt>$ rails s </tt>
+
+It should now be available at <tt>localhost:3000</tt>.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
