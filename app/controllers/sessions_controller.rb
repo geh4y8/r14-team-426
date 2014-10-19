@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
     @user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
     session[:user_id] = @user.id
     ApplicationController.set_access_token(@user.get_access_token(auth))
-    asdfg
     redirect_to root_url, :notice => "Signed in!"
   end
 
