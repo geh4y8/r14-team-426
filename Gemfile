@@ -10,11 +10,13 @@ gem 'turbolinks'
 gem 'devise'
 gem 'cancancan'
 gem 'omniauth-khan-academy'
+gem 'oauth'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'pry'
 end
 
 group :test, :development do
