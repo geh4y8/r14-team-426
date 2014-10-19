@@ -1,5 +1,4 @@
-== README - (EDIT BEFORE FINAL PUBLISHING)
-
+== README
 
 
 == Setup
