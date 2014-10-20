@@ -4,7 +4,7 @@ class ApiuserController < ApplicationController
 
   def create
 
-    @user = User.find_by_email(params[:email])
+    @user = User.find_by_email(params[:email].downcase)
     respond_to do |format|
       format.json do
         render :json => {id: @user.id,
