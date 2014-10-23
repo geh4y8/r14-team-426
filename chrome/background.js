@@ -2,23 +2,20 @@ var badgeData;
 
 // chrome.local.storage.set({timer: 0});
 chrome.storage.onChanged.addListener(function(changes, namespace) {
-debugger;
 	console.log("listening");
 	for (key in changes) {
-		console.log(key);
 		if(key === "id"){
-			
+		    console.log('gottheid');
 			checkBadges();
 			setInterval(function(){
 				checkBadges();
 			},20000);
 
 			chrome.storage.onChanged.addListener(function(changes, namespace) {
-				alert("in here")
         		for (key in changes) {
           			if(key === "badges"){
           			  	alert("new badge");
-          			  	
+
           			  	var count=30;
 
 						var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
@@ -33,17 +30,18 @@ debugger;
 						  	}
 						  	chrome.browserAction.setBadgeText({text: count.toString()});
 						  	chrome.storage.local.set({timer: count});
-						}			
+						}
           			}
         		}
 			});
-		
+
 		}
 	}
 });
 
 function checkBadges () {
 	chrome.storage.local.get("id", function(id) {
+		console.log(id)
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = handleBadgeChange; // Implemented elsewhere.
 		xhr.open("GET", 'http://epicodus-2014.r14.railsrumble.com/api/' + id.id.toString(), true);
@@ -52,12 +50,21 @@ function checkBadges () {
 };
 
 function handleBadgeChange (data) {
-	badgeData = JSON.parse(data.target.response)
-	chrome.storage.local.set({badges: badgeData.sum})
+	if(data.target.status === 200){
+		badgeData = data.target.response;
+		storeBadgeData(badgeData)
+	}
+};
+
+function storeBadgeData(badgeData){
+	if(badgeData !== ""){
+		badgeData =  JSON.parse(badgeData);
+		chrome.storage.local.set({badges: badgeData.sum})
+	}
 };
 
 function timer() {
-  	count=count-1;
+  	count = count-1;
   	if (count < 0)
   	{
      	clearInterval(counter);
