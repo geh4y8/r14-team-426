@@ -9,23 +9,24 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 			checkBadges();
 			setInterval(function(){
 				checkBadges();
-			},20000);
+			},10000);
 
 			chrome.storage.onChanged.addListener(function(changes, namespace) {
         		for (key in changes) {
           			if(key === "badges"){
           			  	alert("new badge");
 
-          			  	var count=30;
+          			  	var count = 30;
 
-						var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+						var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
 						function timer() {
-						  	count=count-1;
+						  	count -= 1;
 						  	if (count < 0)
 						  	{
 						     	clearInterval(counter);
 						     	//counter ended, do something here
+
 						     	return;
 						  	}
 						  	chrome.browserAction.setBadgeText({text: count.toString()});
