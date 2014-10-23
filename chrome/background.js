@@ -5,7 +5,6 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 	console.log("listening");
 	for (key in changes) {
 		if(key === "id"){
-		    console.log('gottheid');
 			checkBadges();
 			setInterval(function(){
 				checkBadges();
@@ -14,7 +13,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 			chrome.storage.onChanged.addListener(function(changes, namespace) {
         		for (key in changes) {
           			if(key === "badges"){
-          			  	alert("new badge");
+          			  	alert('new badge')
 
           			  	var count = 30;
 
@@ -75,4 +74,3 @@ function timer() {
   	chrome.browserAction.setBadgeText({text: count.toString()});
   	chrome.storage.local.set({timer: count});
 };
-

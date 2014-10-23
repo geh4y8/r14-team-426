@@ -6,13 +6,12 @@
   "permissions": [
           "storage",
           "http://whispering-basin-2393.herokuapp.com/*",
-          "http://epicodus-2014.r14.railsrumble.com/*"
+          "http://epicodus-2014.r14.railsrumble.com/*",
+          "https://appengine.google.com/*"
         ],
  "browser_action": {
-    "default_icon": {
-    },
-    "default_title": "Rece.ss",      // optional; shown in tooltip
-    "default_popup": "index.html"        // optional
+    "default_title": "Rece.ss",
+    "default_popup": "index.html"
   },
   "web_accessible_resources": [
     "app.js", "jquery-2.1.1.min.js", "background.js"
@@ -26,8 +25,10 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "exclude_matches": ["https://www.khanacademy.org/*", "http://whispering-basin-2393.herokuapp.com/*", "http://epicodus-2014.r14.railsrumble.com/*"],
-      "js": ["jquery-2.1.1.min.js", "app.js"]
+      "exclude_matches": ["https://www.khanacademy.org/*", "http://whispering-basin-2393.herokuapp.com/*", "http://epicodus-2014.r14.railsrumble.com/*", "https://appengine.google.com/*"],
+      "js": ["jquery-2.1.1.min.js", "app.js", "bootstrap.min.js"],
+      "css": ["bootstrap.css"],
+      "run_at": "document_start"
     }
   ]
 }

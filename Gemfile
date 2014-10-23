@@ -15,7 +15,7 @@ gem 'bootstrap-sass'
 gem 'sprockets'
 
 gem 'therubyracer'
-
+gem 'tzinfo-data'
 gem 'oauth'
 
 group :development do
@@ -31,4 +31,8 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+end
+
+group :production do
+  gem 'rails_12factor'
 end

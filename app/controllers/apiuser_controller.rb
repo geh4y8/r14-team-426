@@ -8,7 +8,7 @@ class ApiuserController < ApplicationController
     respond_to do |format|
       format.json do
         render :json => {id: @user.id,
-                           sum: @user.sum}
+                         sum: @user.sum}
       end
     end
   end
